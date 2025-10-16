@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FruityLand — Recuperar Senha</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Recuperação de senha (simulação): redireciona para login após "envio". -->
+</head>
+<body>
+  <div class="container">
+    <!-- Cabeçalho comum: marca e links de navegação do cliente -->
+<header class="header" role="banner" aria-label="Cabeçalho do site">
+  <div class="brand">
+    <div class="logo" aria-hidden="true">FL</div>
+    <div>
+      <strong>FruityLand</strong>
+      <div style="font-size:12px; color:rgba(255,255,255,0.95)">Hortifrúti | Cliente</div>
+    </div>
+  </div>
+
+  <nav role="navigation" aria-label="Menu principal">
+    <a href="buscar-produtos.html">Produtos</a>
+    <a href="sacola.html">Sacola</a>
+    <a href="acompanhar-pedido.html">Acompanhar</a>
+    <a href="fale-conosco.html">Fale Conosco</a>
+    <a href="index.html">Sair</a>
+  </nav>
+</header>
+
+    <main class="main" aria-labelledby="recuperar-title">
+      <h1 id="recuperar-title">Recuperar Senha</h1>
+      <p style="color:var(--muted)">Insira seu email para recuperar a senha (simulação).</p>
+
+      <form class="form" action="index.html" method="get" aria-label="Formulário de recuperação de senha">
+        <label>
+          <span>Email</span>
+          <input class="input" type="email" name="email" required placeholder="seu@exemplo.com">
+        </label>
+
+        <div style="display:flex; gap:8px; margin-top:8px;">
+          <button class="button" type="submit">Enviar instruções</button>
+          <a class="button light" href="index.html">Voltar</a>
+        </div>
+      </form>
+    </main>
+
+    <footer class="footer">Recuperação simulada — sem envio de email real | © 2025</footer>
+  </div>
+</body>
+</html>

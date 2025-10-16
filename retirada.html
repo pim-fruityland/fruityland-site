@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FruityLand — Retirada / Entrega</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Escolha entre retirada na loja ou entrega (simulação) -->
+</head>
+<body>
+  <div class="container">
+    <!-- Cabeçalho comum: marca e links de navegação do cliente -->
+<header class="header" role="banner" aria-label="Cabeçalho do site">
+  <div class="brand">
+    <div class="logo" aria-hidden="true">FL</div>
+    <div>
+      <strong>FruityLand</strong>
+      <div style="font-size:12px; color:rgba(255,255,255,0.95)">Hortifrúti | Cliente</div>
+    </div>
+  </div>
+
+  <nav role="navigation" aria-label="Menu principal">
+    <a href="buscar-produtos.html">Produtos</a>
+    <a href="sacola.html">Sacola</a>
+    <a href="acompanhar-pedido.html">Acompanhar</a>
+    <a href="fale-conosco.html">Fale Conosco</a>
+    <a href="index.html">Sair</a>
+  </nav>
+</header>
+
+    <main class="main" aria-labelledby="retirada-title">
+      <h1 id="retirada-title">Retirada ou Entrega</h1>
+      <p style="color:var(--muted)">Escolha sua preferência.</p>
+
+      <form class="form" action="pagamento.html" method="get" aria-label="Opções de retirada ou entrega">
+        <label>
+          <input type="radio" name="tipo" value="entrega" checked> Entrega em domicílio (taxa calculada no checkout)
+        </label>
+        <label>
+          <input type="radio" name="tipo" value="retirada"> Retirar na loja (endereço exibido)
+        </label>
+
+        <div style="margin-top:12px;">
+          <a class="button light" href="confirmar-dados.html">Voltar</a>
+          <button class="button" type="submit">Próximo: Pagamento</button>
+        </div>
+      </form>
+
+      <section style="margin-top:14px;">
+        <h2>Endereço de retirada</h2>
+        <p>FruityLand — Ponto de Retirada | Av. Central, 1000 — Brasília/DF</p>
+        <p style="font-size:13px; color:var(--muted)">Horário: Seg–Sáb 08:00–18:00</p>
+      </section>
+    </main>
+
+    <footer class="footer">Simulação de opção de retirada/entrega | © 2025</footer>
+  </div>
+</body>
+</html>

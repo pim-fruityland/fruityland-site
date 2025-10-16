@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FruityLand — Produtos</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Catálogo de produtos (busca simulada). Botões adicionam itens levando à sacola estática. -->
+</head>
+<body>
+  <div class="container">
+    <!-- Cabeçalho comum: marca e links de navegação do cliente -->
+<header class="header" role="banner" aria-label="Cabeçalho do site">
+  <div class="brand">
+    <div class="logo" aria-hidden="true">FL</div>
+    <div>
+      <strong>FruityLand</strong>
+      <div style="font-size:12px; color:rgba(255,255,255,0.95)">Hortifrúti | Cliente</div>
+    </div>
+  </div>
+
+  <nav role="navigation" aria-label="Menu principal">
+    <a href="buscar-produtos.html">Produtos</a>
+    <a href="sacola.html">Sacola</a>
+    <a href="acompanhar-pedido.html">Acompanhar</a>
+    <a href="fale-conosco.html">Fale Conosco</a>
+    <a href="index.html">Sair</a>
+  </nav>
+</header>
+
+    <main class="main" aria-labelledby="catalogo-title">
+      <h1 id="catalogo-title">Catálogo de Produtos</h1>
+      <form class="form" onsubmit="return false;" role="search" aria-label="Pesquisar produtos">
+        <input class="input" type="search" placeholder="Buscar frutas, verduras, legumes..." aria-label="Campo de busca">
+      </form>
+
+      <section class="grid-produtos" aria-live="polite" aria-label="Lista de produtos">
+        <!-- Produto 1 -->
+        <article class="produto-card" role="article">
+          <img src="img/maca.jpg" alt="Maçã Fuji em cesta" />
+          <h3>Maçã Fuji</h3>
+          <p>R$ 5,00 / kg</p>
+          <a class="button" href="sacola.html">Adicionar à sacola</a>
+        </article>
+
+        <!-- Produto 2 -->
+        <article class="produto-card">
+          <img src="img/banana.jpg" alt="Cacho de banana nanica" />
+          <h3>Banana Nanica</h3>
+          <p>R$ 4,00 / kg</p>
+          <a class="button" href="sacola.html">Adicionar à sacola</a>
+        </article>
+
+        <!-- Produto 3 -->
+        <article class="produto-card">
+          <img src="img/alface.jpg" alt="Maço de alface" />
+          <h3>Alface Crespa</h3>
+          <p>R$ 2,50 / unidade</p>
+          <a class="button" href="sacola.html">Adicionar à sacola</a>
+        </article>
+
+        <!-- Produto 4 -->
+        <article class="produto-card">
+          <img src="img/tomate.jpg" alt="Tomates vermelhos" />
+          <h3>Tomate</h3>
+          <p>R$ 6,50 / kg</p>
+          <a class="button" href="sacola.html">Adicionar à sacola</a>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">Navegue e adicione à sacola — protótipo estático | © 2025</footer>
+  </div>
+</body>
+</html>

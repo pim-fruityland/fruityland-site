@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FruityLand — Cadastro</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Página de cadastro do cliente. Campos básicos e sem envio real. -->
+</head>
+<body>
+  <div class="container">
+    <!-- Cabeçalho comum: marca e links de navegação do cliente -->
+<header class="header" role="banner" aria-label="Cabeçalho do site">
+  <div class="brand">
+    <div class="logo" aria-hidden="true">FL</div>
+    <div>
+      <strong>FruityLand</strong>
+      <div style="font-size:12px; color:rgba(255,255,255,0.95)">Hortifrúti | Cliente</div>
+    </div>
+  </div>
+
+  <nav role="navigation" aria-label="Menu principal">
+    <a href="buscar-produtos.html">Produtos</a>
+    <a href="sacola.html">Sacola</a>
+    <a href="acompanhar-pedido.html">Acompanhar</a>
+    <a href="fale-conosco.html">Fale Conosco</a>
+    <a href="index.html">Sair</a>
+  </nav>
+</header>
+
+    <main class="main">
+      <h1>Crie sua conta</h1>
+      <p style="color:var(--muted)">Os dados não são salvos — formulário simula o fluxo e leva ao catálogo.</p>
+
+      <form class="form" action="buscar-produtos.html" method="get" aria-label="Formulário de cadastro">
+        <label>
+          <span>Nome completo</span>
+          <input class="input" type="text" name="nome" placeholder="Seu nome" required>
+        </label>
+        <label>
+          <span>Email</span>
+          <input class="input" type="email" name="email" placeholder="seu@exemplo.com" required>
+        </label>
+        <label>
+          <span>Telefone</span>
+          <input class="input" type="tel" name="telefone" placeholder="(61) 9XXXX-XXXX">
+        </label>
+        <label>
+          <span>Senha</span>
+          <input class="input" type="password" name="senha" required>
+        </label>
+
+        <div style="display:flex; gap:8px; margin-top:8px;">
+          <button class="button" type="submit">Cadastrar e ir ao catálogo</button>
+          <a class="button light" href="index.html">Voltar</a>
+        </div>
+      </form>
+    </main>
+
+    <footer class="footer">FruityLand — protótipo cliente | © 2025</footer>
+  </div>
+</body>
+</html>

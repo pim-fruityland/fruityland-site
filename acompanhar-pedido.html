@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FruityLand — Acompanhar Pedido</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Página para acompanhar o status do pedido. Status simulado. -->
+</head>
+<body>
+  <div class="container">
+    <!-- Cabeçalho comum: marca e links de navegação do cliente -->
+<header class="header" role="banner" aria-label="Cabeçalho do site">
+  <div class="brand">
+    <div class="logo" aria-hidden="true">FL</div>
+    <div>
+      <strong>FruityLand</strong>
+      <div style="font-size:12px; color:rgba(255,255,255,0.95)">Hortifrúti | Cliente</div>
+    </div>
+  </div>
+
+  <nav role="navigation" aria-label="Menu principal">
+    <a href="buscar-produtos.html">Produtos</a>
+    <a href="sacola.html">Sacola</a>
+    <a href="acompanhar-pedido.html">Acompanhar</a>
+    <a href="fale-conosco.html">Fale Conosco</a>
+    <a href="index.html">Sair</a>
+  </nav>
+</header>
+
+    <main class="main" aria-labelledby="acompanhar-title">
+      <h1 id="acompanhar-title">Acompanhe seu Pedido</h1>
+      <p style="color:var(--muted)">Status do pedido (simulação estática).</p>
+
+      <section style="margin-top:12px;">
+        <h2>Pedido #000123</h2>
+        <p><strong>Status:</strong> Em preparo</p>
+        <ol>
+          <li>Recebido</li>
+          <li><strong>Em preparo</strong></li>
+          <li>A caminho</li>
+          <li>Entregue</li>
+        </ol>
+
+        <div style="margin-top:12px;">
+          <a class="button light" href="buscar-produtos.html">Voltar ao catálogo</a>
+          <a class="button" href="index.html">Sair</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">Status ilustrativo — sem atualizações em tempo real | © 2025</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FruityLand — Fale Conosco</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Página de contato / suporte. Formulário não envia, apenas simula fluxo. -->
+</head>
+<body>
+  <div class="container">
+    <!-- Cabeçalho comum: marca e links de navegação do cliente -->
+<header class="header" role="banner" aria-label="Cabeçalho do site">
+  <div class="brand">
+    <div class="logo" aria-hidden="true">FL</div>
+    <div>
+      <strong>FruityLand</strong>
+      <div style="font-size:12px; color:rgba(255,255,255,0.95)">Hortifrúti | Cliente</div>
+    </div>
+  </div>
+
+  <nav role="navigation" aria-label="Menu principal">
+    <a href="buscar-produtos.html">Produtos</a>
+    <a href="sacola.html">Sacola</a>
+    <a href="acompanhar-pedido.html">Acompanhar</a>
+    <a href="fale-conosco.html">Fale Conosco</a>
+    <a href="index.html">Sair</a>
+  </nav>
+</header>
+
+    <main class="main" aria-labelledby="fale-title">
+      <h1 id="fale-title">Fale Conosco</h1>
+      <p style="color:var(--muted)">Use o formulário para simular uma mensagem ao suporte.</p>
+
+      <form class="form" onsubmit="return false;" aria-label="Formulário de contato">
+        <label>
+          <span>Assunto</span>
+          <input class="input" type="text" placeholder="Ex: Pedido, Entrega, Produto">
+        </label>
+        <label>
+          <span>Mensagem</span>
+          <textarea class="textarea" rows="6" placeholder="Escreva sua mensagem..."></textarea>
+        </label>
+
+        <div style="display:flex; gap:8px; margin-top:8px;">
+          <a class="button light" href="buscar-produtos.html">Voltar</a>
+          <button class="button" type="submit">Enviar (simulado)</button>
+        </div>
+      </form>
+    </main>
+
+    <footer class="footer">Responderemos em breve (simulação) | © 2025</footer>
+  </div>
+</body>
+</html>
