@@ -29,15 +29,18 @@
 </header>
 
     <main class="main" aria-labelledby="catalogo-title">
-      <h1 id="catalogo-title">Catálogo de Produtos</h1>
-      <form class="form" onsubmit="return false;" role="search" aria-label="Pesquisar produtos">
+      <div>
+        <img src="./alimentos.jpeg" width="100%" height="300px" style="border-radius: 10px;">
+      </div>
+      <h1 id="catalogo-title" style="padding: 10px; text-align: center;">Catálogo de Produtos</h1>
+      <form class="form" onsubmit="return false;" role="search" aria-label="Pesquisar produtos" style="display: flex; margin: 0 auto;">
         <input class="input" type="search" placeholder="Buscar frutas, verduras, legumes..." aria-label="Campo de busca">
       </form>
 
       <section class="grid-produtos" aria-live="polite" aria-label="Lista de produtos">
         <!-- Produto 1 -->
         <article class="produto-card" role="article">
-          <img src="img/maca.jpg" alt="Maçã Fuji em cesta" />
+          <img src="./maca.fuji.webp" alt="Maçã Fuji em cesta" />
           <h3>Maçã Fuji</h3>
           <p>R$ 5,00 / kg</p>
           <a class="button" href="sacola.html">Adicionar à sacola</a>
@@ -45,7 +48,7 @@
 
         <!-- Produto 2 -->
         <article class="produto-card">
-          <img src="img/banana.jpg" alt="Cacho de banana nanica" />
+          <img src="./banana.nanica.webp" alt="Cacho de banana nanica" />
           <h3>Banana Nanica</h3>
           <p>R$ 4,00 / kg</p>
           <a class="button" href="sacola.html">Adicionar à sacola</a>
@@ -53,7 +56,7 @@
 
         <!-- Produto 3 -->
         <article class="produto-card">
-          <img src="img/alface.jpg" alt="Maço de alface" />
+          <img src="./alface.crespa.jpeg" alt="Maço de alface" />
           <h3>Alface Crespa</h3>
           <p>R$ 2,50 / unidade</p>
           <a class="button" href="sacola.html">Adicionar à sacola</a>
@@ -61,15 +64,70 @@
 
         <!-- Produto 4 -->
         <article class="produto-card">
-          <img src="img/tomate.jpg" alt="Tomates vermelhos" />
+          <img src="./tomate.jpeg" alt="Tomates vermelhos" />
           <h3>Tomate</h3>
           <p>R$ 6,50 / kg</p>
+          <a class="button" href="sacola.html">Adicionar à sacola</a>
+        </article>
+
+        <!-- Produto 5 -->
+        <article class="produto-card">
+          <img src="./laranja.jpeg" alt="Laranja" />
+          <h3>Laranja</h3>
+          <p>R$ 6,50 / kg</p>
+          <a class="button" href="sacola.html">Adicionar à sacola</a>
+        </article>
+
+        <!-- Produto 6 -->
+        <article class="produto-card">
+          <img src="./cenoura.jpeg" alt="Cenoura" />
+          <h3>Cenoura</h3>
+          <p>R$ 4,50 / kg</p>
+          <a class="button" href="sacola.html">Adicionar à sacola</a>
+        </article>
+
+        <!-- Produto 7 -->
+        <article class="produto-card">
+          <img src="./manga.jpeg" alt="Manga" />
+          <h3>Manga</h3>
+          <p>R$ 8,50 / kg</p>
+          <a class="button" href="sacola.html">Adicionar à sacola</a>
+        </article>
+
+        <!-- Produto 8 -->
+        <article class="produto-card">
+          <img src="./pimentao.jpeg" alt="Pimentão" />
+          <h3>Pimentão</h3>
+          <p>R$ 2,50 / kg</p>
+          <a class="button" href="sacola.html">Adicionar à sacola</a>
+        </article>
+
+        <!-- Produto 9 -->
+        <article class="produto-card">
+          <img src="./abobora.jpeg" alt="Abóbora" />
+          <h3>Abóbora</h3>
+          <p>R$ 7,50 / kg</p>
+          <a class="button" href="sacola.html">Adicionar à sacola</a>
+        </article>
+
+        <!-- Produto 10 -->
+        <article class="produto-card">
+          <img src="./abacaxi.jpeg" alt="Abacaxi" />
+          <h3>Abacaxi</h3>
+          <p>R$ 11,50 / kg</p>
           <a class="button" href="sacola.html">Adicionar à sacola</a>
         </article>
       </section>
     </main>
 
-    <footer class="footer">Navegue e adicione à sacola — protótipo estático | © 2025</footer>
+    <footer class="footer">
+      <div class="content">
+        <h3>Descubra o frescor de cada dia.</h3>
+      </div>
+      <div class="copyright">
+        FruityLand | © 2025
+      </div>
+    </footer>
   </div>
 </body>
 </html>

@@ -5,51 +5,209 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>FruityLand — Fale Conosco</title>
   <link rel="stylesheet" href="css/style.css">
-  <!-- Página de contato / suporte. Formulário não envia, apenas simula fluxo. -->
+  <style>
+    .form-content {
+      margin-bottom: 16px;
+    }
+
+    .form-content.error input,
+    .form-content.error textarea {
+      border: 1px solid red;
+    }
+
+    .form-content a {
+      color: red;
+      font-size: 12px;
+      margin-top: 4px;
+      display: block;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .main form{
+      width: 50%;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    
+  </style>
 </head>
 <body>
   <div class="container">
-    <!-- Cabeçalho comum: marca e links de navegação do cliente -->
-<header class="header" role="banner" aria-label="Cabeçalho do site">
-  <div class="brand">
-    <div class="logo" aria-hidden="true">FL</div>
-    <div>
-      <strong>FruityLand</strong>
-      <div style="font-size:12px; color:rgba(255,255,255,0.95)">Hortifrúti | Cliente</div>
-    </div>
-  </div>
+    <header class="header" role="banner" aria-label="Cabeçalho do site">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">FL</div>
+        <div>
+          <strong>FruityLand</strong>
+          <div style="font-size:12px; color:rgba(255,255,255,0.95)">Hortifrúti | Cliente</div>
+        </div>
+      </div>
 
-  <nav role="navigation" aria-label="Menu principal">
-    <a href="buscar-produtos.html">Produtos</a>
-    <a href="sacola.html">Sacola</a>
-    <a href="acompanhar-pedido.html">Acompanhar</a>
-    <a href="fale-conosco.html">Fale Conosco</a>
-    <a href="index.html">Sair</a>
-  </nav>
-</header>
+      <nav role="navigation" aria-label="Menu principal">
+        <a href="buscar-produtos.html">Produtos</a>
+        <a href="sacola.html">Sacola</a>
+        <a href="acompanhar-pedido.html">Acompanhar</a>
+        <a href="fale-conosco.html">Fale Conosco</a>
+        <a href="index.html">Sair</a>
+      </nav>
+    </header>
 
     <main class="main" aria-labelledby="fale-title">
-      <h1 id="fale-title">Fale Conosco</h1>
-      <p style="color:var(--muted)">Use o formulário para simular uma mensagem ao suporte.</p>
+      <div>
+        <h2 style="background-color: rgb(2, 70, 82); color: white; padding: 10px; text-align: center;">Queremos ouvir você!</h2>
+        <h3 style="color:  rgb(2, 70, 82); margin-top: 10px; text-align: center;">Se tiver dúvidas, sugestões, elogios ou qualquer outro comentário, envie sua mensagem para nós.
+ Nossa equipe está pronta para te atender com atenção e carinho.
+ <br>Responderemos o mais breve possível!</h3>
+        <form id="form" class="form" aria-label="Formulário de contato" style="padding: 10px;">
+        <div class="formulario">
+          <div class="form-header">
+            <h1 id="fale-title">Fale Conosco!</h1>
+          </div>
+          <div class="form-content">
+          <label for="username">Nome:</label>
+          <input type="text" id="username" placeholder="Digite o seu nome" />
+          <a></a>
+        </div>
 
-      <form class="form" onsubmit="return false;" aria-label="Formulário de contato">
-        <label>
-          <span>Assunto</span>
-          <input class="input" type="text" placeholder="Ex: Pedido, Entrega, Produto">
-        </label>
-        <label>
-          <span>Mensagem</span>
-          <textarea class="textarea" rows="6" placeholder="Escreva sua mensagem..."></textarea>
-        </label>
+        <div class="form-content">
+          <label for="email">Email:</label>
+          <input type="email" id="email" placeholder="Digite o seu email" />
+          <a></a>
+        </div>
 
-        <div style="display:flex; gap:8px; margin-top:8px;">
-          <a class="button light" href="buscar-produtos.html">Voltar</a>
-          <button class="button" type="submit">Enviar (simulado)</button>
+        <div class="form-content">
+          <label for="telefone">Telefone:</label>
+          <input type="tel" id="telefone" placeholder="(99) 99999-9999" maxlength="15" />
+          <a></a>
+        </div>
+
+        <div class="form-content">
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" rows="5" placeholder="Digite uma mensagem"></textarea>
+          <a></a>
+        </div>
+
+        <div class="button-group" style=" display: flex; justify-content: center; gap: 8px;">
+          <button type="submit">Enviar mensagem</button>
+          <button type="reset">Limpar formulário</button>
         </div>
       </form>
+      </div>
+      
     </main>
 
-    <footer class="footer">Responderemos em breve (simulação) | © 2025</footer>
+    <footer class="footer">
+      <div class="content">
+        <h3>Descubra o frescor de cada dia.</h3>
+      </div>
+      <div class="copyright">
+        FruityLand | © 2025
+      </div>
+    </footer>
   </div>
+
+  <script>
+    const form = document.getElementById("form");
+    const username = document.getElementById("username");
+    const email = document.getElementById("email");
+    const telefone = document.getElementById("telefone");
+    const mensagem = document.getElementById("mensagem");
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      checkForm();
+    });
+
+    telefone.addEventListener("input", () => {
+      let valor = telefone.value.replace(/\D/g, "");
+      if (valor.length > 11) valor = valor.slice(0, 11);
+
+      if (valor.length <= 10) {
+        telefone.value = valor.replace(/(\d{2})(\d{4})(\d{0,4})/, "($1) $2-$3");
+      } else {
+        telefone.value = valor.replace(/(\d{2})(\d{5})(\d{0,4})/, "($1) $2-$3");
+      }
+    });
+
+    function checkInputUsername() {
+      const usernameValue = username.value.trim();
+      if (usernameValue === "") {
+        errorInput(username, "Nome obrigatório!");
+      } else {
+        clearError(username);
+      }
+    }
+
+    function checkInputEmail() {
+      const emailValue = email.value.trim();
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (emailValue === "") {
+        errorInput(email, "E-mail obrigatório!");
+      } else if (!emailRegex.test(emailValue)) {
+        errorInput(email, "Formato de e-mail inválido!");
+      } else {
+        clearError(email);
+      }
+    }
+
+    function checkInputTelefone() {
+      const telefoneValue = telefone.value.trim();
+      const telefoneRegex = /^\(\d{2}\)\s\d{4,5}-\d{4}$/;
+      if (telefoneValue === "") {
+        errorInput(telefone, "Telefone obrigatório!");
+      } else if (!telefoneRegex.test(telefoneValue)) {
+        errorInput(telefone, "Formato de telefone inválido!");
+      } else {
+        clearError(telefone);
+      }
+    }
+
+    function checkInputMensagem() {
+      const mensagemValue = mensagem.value.trim();
+      if (mensagemValue === "") {
+        errorInput(mensagem, "Escreva uma mensagem!");
+      } else {
+        clearError(mensagem);
+      }
+    }
+
+    function checkForm() {
+      checkInputUsername();
+      checkInputEmail();
+      checkInputTelefone();
+      checkInputMensagem();
+
+      const formItems = form.querySelectorAll(".form-content");
+      const isValid = [...formItems].every((item) => item.className === "form-content");
+
+      if (isValid) {
+        alert("Mensagem enviada com sucesso! (simulação)");
+        form.reset();
+      } else {
+        alert("Preencha todos os campos corretamente!");
+      }
+    }
+
+    function errorInput(input, message) {
+      const formItem = input.parentElement;
+      const textMessage = formItem.querySelector("a");
+      textMessage.innerText = message;
+      formItem.className = "form-content error";
+    }
+
+    function clearError(input) {
+      const formItem = input.parentElement;
+      const textMessage = formItem.querySelector("a");
+      textMessage.innerText = "";
+      formItem.className = "form-content";
+    }
+  </script>
 </body>
-</html>

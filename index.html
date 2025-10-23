@@ -25,11 +25,13 @@
     <a href="acompanhar-pedido.html">Acompanhar</a>
     <a href="fale-conosco.html">Fale Conosco</a>
     <a href="index.html">Sair</a>
+    
   </nav>
 </header>
 
     <main class="main" role="main">
-      <h1>Entrar na sua conta</h1>
+      <div class="form-box">
+        <h1>Entrar na sua conta</h1>
       <p style="color:var(--muted)">Apenas fluxo de navegação — sem autenticação real.</p>
 
       <form class="form" action="buscar-produtos.html" method="get" aria-label="Formulário de login">
@@ -41,16 +43,23 @@
           <span>Senha</span>
           <input class="input" type="password" name="senha" placeholder="••••••••" required>
         </label>
-
-        <div style="display:flex; gap:8px; margin-top:8px;">
+        <a style=" color:var(--muted);" href="recuperar-senha.html">Recuperar senha</a>
+        <div style="display:flex; gap:8px; margin-top:8px; margin: auto;">
           <button class="button" type="submit">Entrar</button>
           <a class="button light" href="cadastro.html">Cadastre-se</a>
-          <a style="align-self:center; margin-left:auto; color:var(--muted);" href="recuperar-senha.html">Recuperar senha</a>
         </div>
       </form>
+      </div>
     </main>
 
-    <footer class="footer">FruityLand — protótipo cliente | © 2025</footer>
+    <footer class="footer">
+      <div class="content">
+        <h3>Descubra o frescor de cada dia.</h3>
+      </div>
+      <div class="copyright">
+        FruityLand | © 2025
+      </div>
+    </footer>
   </div>
 </body>
 </html>

@@ -5,11 +5,43 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>FruityLand — Sacola</title>
   <link rel="stylesheet" href="css/style.css">
-  <!-- Página da sacola (carrinho) - itens simulados - segue fluxo para confirmar-dados.html -->
+  <style>
+    /* Ajustes visuais dos checkboxes e itens */
+    .sacola-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sacola-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255,255,255,0.1);
+      padding: 10px;
+      margin-bottom: 8px;
+      border-radius: 8px;
+    }
+
+    .sacola-item input[type="checkbox"] {
+      margin-right: 10px;
+      transform: scale(1.2);
+    }
+
+    .sacola-item.selected {
+      background-color: rgba(0, 255, 100, 0.15);
+    }
+
+    .total-selecionados {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <!-- Cabeçalho comum: marca e links de navegação do cliente -->
+    <!-- Cabeçalho -->
 <header class="header" role="banner" aria-label="Cabeçalho do site">
   <div class="brand">
     <div class="logo" aria-hidden="true">FL</div>
@@ -30,37 +62,144 @@
 
     <main class="main" aria-labelledby="sacola-title">
       <h1 id="sacola-title">Minha Sacola</h1>
-      <p style="color:var(--muted)">Itens adicionados (simulação). Edite ou prossiga para confirmação.</p>
+      <p style="color:var(--muted)">Selecione os itens desejados e prossiga para confirmação.</p>
 
-      <ul class="sacola-list" aria-live="polite">
+      <ul class="sacola-list" id="sacola-list">
+        <!-- Itens simulados -->
         <li class="sacola-item">
-          <div>
+          <label>
+            <input type="checkbox" class="select-item">
+            <img src="./maca.fuji.webp" width="40px" height="40px" style="border-radius: 2px;">
             <strong>Maçã Fuji</strong><br>
-            <small>1 kg</small>
-          </div>
-          <div>
-            <span>R$ 5,00</span>
-          </div>
+            <small>R$ 5,00 / kg</small>
+          </label>
         </li>
 
         <li class="sacola-item">
-          <div>
+          <label>
+            <input type="checkbox" class="select-item">
+            <img src="./banana.nanica.webp" width="40px" height="40px" style="border-radius: 2px;">
             <strong>Banana Nanica</strong><br>
-            <small>1 kg</small>
-          </div>
-          <div>
-            <span>R$ 4,00</span>
-          </div>
+            <small> R$ 4,00 / kg</small>
+          </label>
         </li>
-      </ul>
 
-      <div style="display:flex; gap:8px; margin-top:12px;">
+        <li class="sacola-item">
+          <label>
+            <input type="checkbox" class="select-item">
+            <img src="./alface.crespa.jpeg" width="40px" height="40px" style="border-radius: 2px;">
+            <strong>Alface Crespa</strong><br>
+            <small> R$ 2,50 / kg</small>
+          </label>
+        </li>
+
+        <li class="sacola-item">
+          <label>
+            <input type="checkbox" class="select-item">
+            <img src="./tomate.jpeg" width="40px" height="40px" style="border-radius: 2px;">
+            <strong>Tomate</strong><br>
+            <small>R$ 6,50 / kg</small>
+          </label>
+        </li>
+
+                <li class="sacola-item">
+          <label>
+            <input type="checkbox" class="select-item">
+            <img src="./laranja.jpeg" width="40px" height="40px" style="border-radius: 2px;">
+            <strong>Laranja</strong><br>
+            <small>R$ 6,50 / kg</small>
+          </label>
+        </li>
+
+                <li class="sacola-item">
+          <label>
+            <input type="checkbox" class="select-item">
+            <img src="./cenoura.jpeg" width="40px" height="40px" style="border-radius: 2px;">
+            <strong>Cenoura</strong><br>
+            <small>R$ 4,50 / kg</small>
+          </label>
+        </li>
+
+                <li class="sacola-item">
+          <label>
+            <input type="checkbox" class="select-item">
+            <img src="./manga.jpeg" width="40px" height="40px" style="border-radius: 2px;">
+            <strong>Manga</strong><br>
+            <small>R$ 8,50 / kg</small>
+          </label>
+        </li>
+
+                <li class="sacola-item">
+          <label>
+            <input type="checkbox" class="select-item">
+            <img src="./pimentao.jpeg" width="40px" height="40px" style="border-radius: 2px;">
+            <strong>Pimentão</strong><br>
+            <small>R$ 2,50 / kg</small>
+          </label>
+        </li>
+
+                <li class="sacola-item">
+          <label>
+            <input type="checkbox" class="select-item">
+            <img src="./abobora.jpeg" width="40px" height="40px" style="border-radius: 2px;">
+            <strong>Abóbora</strong><br>
+            <small>R$ 7,50 / kg</small>
+          </label>
+        </li>
+
+                <li class="sacola-item">
+          <label>
+            <input type="checkbox" class="select-item">
+            <img src="./abacaxi.jpeg" width="40px" height="40px" style="border-radius: 2px;">
+            <strong>Abacaxi</strong><br>
+            <small>R$ 11,50 / kg</small>
+          </label>
+        </li>
+        </ul>
+
+      <div class="total-selecionados" id="total-selecionados">
+        Nenhum item selecionado
+      </div>
+    
+
+      <div style="display:flex; gap:8px; margin-top:16px;">
         <a class="button light" href="buscar-produtos.html">Continuar comprando</a>
         <a class="button" href="confirmar-dados.html">Confirmar Dados</a>
       </div>
     </main>
 
-    <footer class="footer">Sacola estática — Sem backend | © 2025</footer>
+    <footer class="footer">
+      <div class="content">
+        <h3>Descubra o frescor de cada dia.</h3>
+      </div>
+      <div class="copyright">
+        FruityLand | © 2025
+      </div>
+    </footer>
   </div>
+
+  <script>
+    // Script para destacar seleção e contar quantos itens estão marcados
+    const checkboxes = document.querySelectorAll('.select-item');
+    const totalSelecionados = document.getElementById('total-selecionados');
+
+    function atualizarContagem() {
+      const selecionados = document.querySelectorAll('.select-item:checked');
+      totalSelecionados.textContent = 
+        selecionados.length === 0
+          ? 'Nenhum item selecionado'
+          : `${selecionados.length} item(s) selecionado(s)`;
+    }
+
+    checkboxes.forEach(cb => {
+      cb.addEventListener('change', e => {
+        const item = e.target.closest('.sacola-item');
+        item.classList.toggle('selected', e.target.checked);
+        atualizarContagem();
+      });
+    });
+
+    atualizarContagem();
+  </script>
 </body>
 </html>

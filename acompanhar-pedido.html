@@ -29,27 +29,54 @@
 </header>
 
     <main class="main" aria-labelledby="acompanhar-title">
-      <h1 id="acompanhar-title">Acompanhe seu Pedido</h1>
-      <p style="color:var(--muted)">Status do pedido (simulação estática).</p>
+      <h1 id="acompanhar-title" style="background-color: rgb(51, 99, 51); padding: 5px; text-align: center; color:white;">Acompanhe seu Pedido</h1>
+      <p style="color:var(--muted); text-align: center; padding: 10px;">Status do pedido (simulação estática).</p>
 
-      <section style="margin-top:12px;">
-        <h2>Pedido #000123</h2>
-        <p><strong>Status:</strong> Em preparo</p>
-        <ol>
+      <!-- Formulário simples com validações -->
+        <form onsubmit="return false;" style="margin-top:15px; text-align: center;" class="form-box">
+        <label for="numero-pedido"><strong>Digite o número do seu pedido:</strong></label><br>
+        <input 
+          type="number" 
+          id="numero-pedido" 
+          name="numero-pedido" 
+          required 
+          min="1" 
+          placeholder="Ex: 123" 
+          title="Digite apenas números válidos do pedido" 
+          style="padding:6px; margin-top:5px; border-radius:6px; border:1px solid #ccc;"
+        >
+        <button type="submit" style="margin-left:5px;">Acompanhar</button>
+      </form>
+      <section style="margin-top:12px; width: 300px; margin: 0 auto;">
+        <h2 style="background-color: rgb(20, 59, 20); color: #ffff; padding: 5px; width: 200px; margin-top: 8px;">Pedido #000123</h2>
+        <p style="padding: 15px;"><strong>Status:</strong> Em preparo</p>
+        <ol class="preparo">
           <li>Recebido</li>
           <li><strong>Em preparo</strong></li>
           <li>A caminho</li>
           <li>Entregue</li>
         </ol>
 
-        <div style="margin-top:12px;">
+        <!-- Prazo de entrega adicionado em HTML puro -->
+        <p style="margin-top:10px; font-weight:bold; color:green; margin-bottom: 8px;">
+          Previsão de entrega: até 2 dias úteis.
+        </p>
+
+        <div style="display: flex; gap:8px; margin-top:10px; margin: auto;">
           <a class="button light" href="buscar-produtos.html">Voltar ao catálogo</a>
           <a class="button" href="index.html">Sair</a>
         </div>
       </section>
     </main>
 
-    <footer class="footer">Status ilustrativo — sem atualizações em tempo real | © 2025</footer>
+    <footer class="footer">
+      <div class="content">
+        <h3>Descubra o frescor de cada dia.</h3>
+      </div>
+      <div class="copyright">
+        FruityLand | © 2025
+      </div>
+    </footer>
   </div>
 </body>
 </html>

@@ -29,10 +29,13 @@
 </header>
 
     <main class="main">
-      <h1>Crie sua conta</h1>
+      <div style="display: flex; align-items: center;" >
+        <img src="./fruityland.jpg" alt="Cadastro.img" width="35%" height="35%" style="border-radius: 10px ;">
+        <div class="form-box">
+        <h1>Crie sua conta</h1>
       <p style="color:var(--muted)">Os dados não são salvos — formulário simula o fluxo e leva ao catálogo.</p>
 
-      <form class="form" action="buscar-produtos.html" method="get" aria-label="Formulário de cadastro">
+      <form class="form" action="buscar-produtos.html" method="get" aria-label="Formulário de cadastro" style="align-items: baseline;">
         <label>
           <span>Nome completo</span>
           <input class="input" type="text" name="nome" placeholder="Seu nome" required>
@@ -50,14 +53,23 @@
           <input class="input" type="password" name="senha" required>
         </label>
 
-        <div style="display:flex; gap:8px; margin-top:8px;">
+        <div style="display:flex; gap:8px; margin-top:8px; margin: auto;">
           <button class="button" type="submit">Cadastrar e ir ao catálogo</button>
           <a class="button light" href="index.html">Voltar</a>
         </div>
+      </div>
       </form>
+      </div>
     </main>
 
-    <footer class="footer">FruityLand — protótipo cliente | © 2025</footer>
+    <footer class="footer">
+      <div class="content">
+        <h3>Descubra o frescor de cada dia.</h3>
+      </div>
+      <div class="copyright">
+        FruityLand | © 2025
+      </div>
+    </footer>
   </div>
 </body>
 </html>

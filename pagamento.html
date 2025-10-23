@@ -29,11 +29,14 @@
 </header>
 
     <main class="main" aria-labelledby="pagamento-title">
-      <h1 id="pagamento-title">Pagamento</h1>
+      <div class="form-box">
+        <h1 id="pagamento-title">Pagamento</h1>
       <p style="color:var(--muted)">Escolha a forma de pagamento. As informações não são processadas.</p>
+      </div>
 
-      <form class="form" action="acompanhar-pedido.html" method="get" aria-label="Formulário de pagamento">
-        <label>
+      <div class="pagamento">
+        <form class="form" action="acompanhar-pedido.html" method="get" aria-label="Formulário de pagamento" style="display: flex; gap: 12px;">
+        <label >
           <input type="radio" name="pag" value="pix" checked> Pix
         </label>
         <label>
@@ -42,15 +45,24 @@
         <label>
           <input type="radio" name="pag" value="boleto"> Boleto bancário
         </label>
-
-        <div style="display:flex; gap:8px; margin-top:12px;">
-          <a class="button light" href="retirada.html">Voltar</a>
-          <button class="button" type="submit">Finalizar Pedido</button>
+        <img src="./Banco Virtual.jpg" alt="Pagamento"  class="imagem-pagamento" width="60%" height="40%" style="margin: 0 auto;">
         </div>
+      </div>
+      <div style="display:flex; gap:8px; margin-top:12px; margin: auto;">
+        <a class="button light" href="retirada.html">Voltar</a>
+        <button class="button" type="submit">Finalizar Pedido</button>
+      </div>
       </form>
     </main>
 
-    <footer class="footer">Pagamento simulado — sem integração | © 2025</footer>
+    <footer class="footer">
+      <div class="content">
+        <h3>Descubra o frescor de cada dia.</h3>
+      </div>
+      <div class="copyright">
+        FruityLand | © 2025
+      </div>
+    </footer>
   </div>
 </body>
 </html>

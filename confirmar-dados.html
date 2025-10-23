@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>FruityLand — Confirmar Dados</title>
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+
   <!-- Página de confirmação dos dados do cliente e endereço antes do pagamento -->
 </head>
 <body>
@@ -29,29 +31,38 @@
 </header>
 
     <main class="main" aria-labelledby="confirmar-title">
-      <h1 id="confirmar-title">Confirmar Informações</h1>
+      <div class="form-box" >
+        <h1 id="confirmar-title"><span class="material-symbols-outlined">check_circle</span>Confirmar Informações</h1>
       <p style="color:var(--muted)">Revise seus dados e escolha forma de entrega antes do pagamento.</p>
 
       <section style="margin-top:12px;">
-        <h2>Dados do cliente</h2>
-        <p><strong>Nome:</strong> João da Silva</p>
+        <h2><span class="material-symbols-outlined">person</span>Dados do cliente</h2>
+        <p style="padding-top: 10px;"><strong>Nome:</strong> João da Silva</p>
         <p><strong>Email:</strong> joao@exemplo.com</p>
         <p><strong>Telefone:</strong> (61) 9XXXX-XXXX</p>
       </section>
 
       <section style="margin-top:12px;">
-        <h2>Endereço de entrega</h2>
-        <p>Rua Exemplo, 123 — Asa Norte — Brasília/DF</p>
+        <h2><span class="material-symbols-outlined">home_pin</span>Endereço de entrega</h2>
+        <p style="padding-top: 10px;">Rua Exemplo, 123 — Asa Norte — Brasília/DF</p>
         <p>Observações: Entregar na portaria após as 10h</p>
-      </section>
 
-      <div style="display:flex; gap:8px; margin-top:12px;">
+      </section>
+      <div style="gap:8px; margin-top:12px; margin: auto; padding: 10px;">
         <a class="button light" href="sacola.html">Voltar</a>
         <a class="button" href="retirada.html">Escolher Retirada/Entrega</a>
       </div>
+      </div>
     </main>
 
-    <footer class="footer">Dados fictícios — apenas para demonstração | © 2025</footer>
+    <footer class="footer">
+      <div class="content">
+        <h3>Descubra o frescor de cada dia.</h3>
+      </div>
+      <div class="copyright">
+        FruityLand | © 2025
+      </div>
+    </footer>
   </div>
 </body>
 </html>
